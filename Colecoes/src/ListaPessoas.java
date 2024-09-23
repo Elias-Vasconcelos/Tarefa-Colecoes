@@ -16,15 +16,28 @@ public class ListaPessoas implements Comparator<Pessoa> {
 
 
 
-    public  void adicionarPessoa(String nome , String genero){
+    public void adicionarPessoa(String nome , String genero){
         Pessoa novaPessoa = new Pessoa(nome, genero);
-        listaDePessos.add(novaPessoa);
+        this.listaDePessos.add(novaPessoa);
     }
 
     public void filtraPessoas(){
         for (Pessoa pessoa : listaDePessos){
 
+            if(pessoa.genero.equals("masculino")) {
+                this.listaMasculina.add(pessoa);
+            }
+
+            if(pessoa.genero.equals("feminino")) {
+                this.listaFeminina.add(pessoa);
+            }
         }
+        System.out.println("***** Lista Masculina *****");
+        System.out.println(listaMasculina);
+        System.out.println("");
+        System.out.println("***** Lista Feminina *****");
+        System.out.println(listaFeminina);
+        System.out.println("");
     };
 
 }

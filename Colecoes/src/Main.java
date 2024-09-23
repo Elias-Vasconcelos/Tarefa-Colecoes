@@ -10,15 +10,23 @@ public class Main {
         String nomesDasPessoas = "";
         List<String> listaPessoa = new ArrayList<>();
 
+        ListaPessoas listadetalhada = new ListaPessoas();
+
         System.out.println("Ola, dijite o nome das pessoas separado por virgula, Exemplo,Exemplo ");
 
         nomesDasPessoas = scan.nextLine();
-        listaPessoa = Arrays.asList(nomesDasPessoas.split(",")) ;
+        listaPessoa = Arrays.asList(nomesDasPessoas.split(","));
 
         listaPessoa.sort(String::compareTo);
 
-        System.out.println(listaPessoa);
 
+        for(String pessoa : listaPessoa ){
+             String[] nomesGeneros = pessoa.split("-");
+             
+             listadetalhada.adicionarPessoa(nomesGeneros[0], nomesGeneros[1])
+        };
 
+        
+        listadetalhada.filtraPessoas();
     }
 }
