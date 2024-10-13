@@ -1,0 +1,49 @@
+Index: Colecoes/src/ListaPessoas.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.util.ArrayList;\r\nimport java.util.Comparator;\r\nimport java.util.List;\r\n\r\npublic class ListaPessoas implements Comparator<Pessoa> {\r\n\r\n\r\n    List<Pessoa> listaDePessos = new ArrayList<>();\r\n    List<Pessoa> listaMasculina = new ArrayList<>();\r\n    List<Pessoa> listaFeminina = new ArrayList<>();\r\n\r\n    @Override\r\n    public int compare(Pessoa p1, Pessoa p2) {\r\n        return p1.getNome().compareTo(p2.getNome());\r\n    }\r\n\r\n\r\n\r\n    public  void adicionarPessoa(String nome , String genero){\r\n        Pessoa novaPessoa = new Pessoa(nome, genero);\r\n        listaDePessos.add(novaPessoa);\r\n    }\r\n\r\n    public void filtraPessoas(){\r\n        for (Pessoa pessoa : listaDePessos){\r\n\r\n        }\r\n    };\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Colecoes/src/ListaPessoas.java b/Colecoes/src/ListaPessoas.java
+--- a/Colecoes/src/ListaPessoas.java	(revision 5a96fb5edef26d4cbe5fc6d7b710927896f95dde)
++++ b/Colecoes/src/ListaPessoas.java	(date 1728847213120)
+@@ -9,22 +9,26 @@
+     List<Pessoa> listaMasculina = new ArrayList<>();
+     List<Pessoa> listaFeminina = new ArrayList<>();
+ 
+-    @Override
+-    public int compare(Pessoa p1, Pessoa p2) {
+-        return p1.getNome().compareTo(p2.getNome());
+-    }
++
+ 
++    public void filtraPessoas( String pessoa){
+ 
++    };
+ 
+-    public  void adicionarPessoa(String nome , String genero){
+-        Pessoa novaPessoa = new Pessoa(nome, genero);
+-        listaDePessos.add(novaPessoa);
+-    }
+ 
+-    public void filtraPessoas(){
+-        for (Pessoa pessoa : listaDePessos){
+ 
+-        }
+-    };
++
++
++
++//    public  void adicionarPessoa(String nome , String genero){
++//        Pessoa novaPessoa = new Pessoa(nome, genero);
++//        listaDePessos.add(novaPessoa);
++//    }
++//
++//    public void filtraPessoas(){
++//        for (Pessoa pessoa : listaDePessos){
++//
++//        }
++//    };
+ 
+ }

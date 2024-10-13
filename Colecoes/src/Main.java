@@ -16,7 +16,6 @@ public class Main {
         listaPessoa = Arrays.asList(nomesDasPessoas.split(",")) ;
 
         listaPessoa.sort(String::compareTo);
-
         System.out.println(listaPessoa);
 
 
