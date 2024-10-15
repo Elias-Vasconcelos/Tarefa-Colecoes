@@ -1,4 +1,6 @@
-public class Pessoa {
+package Parte2;
+
+public class Pessoa implements Comparable<Pessoa> {
 
     private String genero;
     private String nome;
@@ -11,7 +13,7 @@ public class Pessoa {
         return genero;
     }
 
-    public Pessoa(String genero, String nome) {
+    public Pessoa(String nome, String genero) {
         this.genero = genero;
         this.nome = nome;
     }
@@ -22,5 +24,10 @@ public class Pessoa {
                 "genero='" + genero + '\'' +
                 ", nome='" + nome + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Pessoa pessoa) {
+        return this.nome.compareTo(pessoa.getNome()) ;
     }
 }
